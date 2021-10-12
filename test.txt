@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 war1
+=======
+michal
+>>>>>>> test
