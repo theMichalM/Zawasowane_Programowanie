@@ -7,19 +7,19 @@ api = Api(app)
 
 class Movies(Resource):
     def get(self):
-        return read_file('./Lab7/data/movies.csv', "movie")
+        return read_file('./data/movies.csv', "movie")
 
 class Links(Resource):
     def get(self):
-        return read_file('./Lab7/data/links.csv', "link")
+        return read_file('./data/links.csv', "link")
 
 class Tags(Resource):
     def get(self):
-        return read_file('./Lab7/data/tags.csv', "tag")
+        return read_file('./data/tags.csv', "tag")
 
 class Ratings(Resource):
     def get(self):
-        return read_file('./Lab7/data/ratings.csv', "rating")
+        return read_file('./data/ratings.csv', "rating")
 
 api.add_resource(Movies, '/movies')
 api.add_resource(Links, '/links')
