@@ -8,7 +8,8 @@ pacjent1 = Pacjent("Adam", "Małysz", "111222333", "ul. Bukowa 100 m 10")
 dietetyk1 = Dietetyk("Gordon", "Ramsey", "666219827", "2019-03-17")
 
 dieta1 = Dieta("Slim Standard", "Dieta dla każdego!", 1500, 210.00)
-dieta2 = Dieta("Slim Hashimoto", "Dieta skomponowana specjalnie dla osób zmagających się  chorobami tarczycy.", 1800, 220.50)
+dieta2 = Dieta("Slim Hashimoto", "Dieta dla osób z chorobami tarczycy.",
+               1800, 220.50)
 
 zamowienie = Zamowienie()
 zamowienie.nr_zamowienia = 12
