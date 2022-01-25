@@ -17,7 +17,7 @@ CLASSES = ["background", "aeroplane", "bicycle", "bird", "boat",
            "sofa", "train", "tvmonitor"]
 
 print("[INFO] loading model...")
-net = cv2.dnn.readNetFromCaffe("MobileNetSSD_deploy.prototxt.txt", "MobileNetSSD_deploy.caffemodel")
+net = cv2.dnn.readNetFromCaffe("detector/MobileNetSSD_deploy.prototxt.txt", "detector/MobileNetSSD_deploy.caffemodel")
 image = cv2.imread(args["image"])
 image = imutils.resize(image, width=min(400, image.shape[1]))
 (h, w) = image.shape[:2]
@@ -34,8 +34,8 @@ for i in np.arange(0, detections.shape[2]):
         box = detections[0, 0, i, 3:7] * np.array([w, h, w, h])
         (startX, startY, endX, endY) = box.astype("int")
         if CLASSES[idx] == args["detect"]:
-            label = "{}: {:.2f}%".format(CLASSES[idx],
-                                         confidence * 100)
+            label = "{}{}: {:.2f}%".format(CLASSES[idx], person + 1,
+                                           confidence * 100)
             print(label)
             cv2.rectangle(image, (startX, startY), (endX, endY),
                           (25, 216, 94), 2)
