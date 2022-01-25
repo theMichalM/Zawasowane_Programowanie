@@ -1,5 +1,4 @@
-from projekt.utils import detection
-from projekt.utils import argparser
+from utils import detection, argparser
 
 args = argparser()
 detection(args["image"], args["confidence"], args["detect"])
